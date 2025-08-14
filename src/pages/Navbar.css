@@ -128,57 +128,98 @@
 @media (max-width: 768px) {
   .nav-container {
     padding: 0 1rem;
+    height: 60px; /* Reduced height for mobile */
   }
   
   .nav-menu {
     position: fixed;
-    top: 70px;
+    top: 60px; /* Match the container height */
     left: -100%;
     width: 100%;
-    height: calc(100vh - 70px);
-    background: rgba(255, 255, 255, 0.1);
+    height: calc(100vh - 60px);
+    background: rgba(20, 20, 40, 0.95); /* Darker, more opaque background */
     backdrop-filter: blur(20px);
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center; /* Center items vertically */
     align-items: center;
-    padding-top: 2rem;
-    gap: 1rem;
-    transition: left 0.3s ease;
+    padding: 0;
+    gap: 1.5rem;
+    transition: all 0.3s ease;
+    z-index: 999; /* Ensure it's above other content */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   }
   
   .nav-menu.active {
     left: 0;
+    animation: fadeIn 0.3s ease-out;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
   }
   
   .nav-link {
-    font-size: 1.2rem;
-    padding: 1rem 2rem;
-    width: 80%;
+    font-size: 1.1rem;
+    padding: 0.8rem 0;
+    width: 70%;
     text-align: center;
-    border-radius: 15px;
+    border-radius: 10px;
+    margin: 0.2rem 0;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.2s ease;
+  }
+  
+  .nav-link:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px) scale(1.03);
   }
   
   .mobile-menu-btn {
     display: flex;
+    z-index: 1000; /* Ensure it's above the menu */
   }
   
   .nav-logo {
     font-size: 1.3rem;
+    z-index: 1000; /* Ensure it's above the menu */
   }
 }
 
 @media (max-width: 480px) {
   .nav-container {
-    padding: 0 0.5rem;
+    padding: 0 0.75rem;
+    height: 55px; /* Even smaller height for very small screens */
+  }
+  
+  .nav-menu {
+    top: 55px;
+    height: calc(100vh - 55px);
+    gap: 1rem;
   }
   
   .nav-link {
-    font-size: 1.1rem;
-    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    padding: 0.7rem 0;
+    width: 85%; /* Wider on very small screens */
+    margin: 0.15rem 0;
+  }
+  
+  .mobile-menu-btn span {
+    width: 22px; /* Slightly smaller hamburger icon */
+    height: 2px;
+    margin: 3px 0;
   }
   
   .nav-logo {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+  }
+  
+  /* Improve touch targets for mobile */
+  .mobile-menu-btn {
+    padding: 0.6rem;
+    margin-right: -0.5rem; /* Give more touch area */
   }
 }
 
@@ -201,4 +242,32 @@
     opacity: 1;
     transform: translateY(0);
   }
-} 
+}
+
+/* Menu overlay */
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 998; /* Below the menu but above other content */
+  animation: fadeIn 0.2s ease-out;
+}
+
+/* Active state for mobile navigation */
+.nav-link.active {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Improved touch feedback */
+@media (max-width: 768px) {
+  .nav-link:active {
+    transform: scale(0.98);
+    background: rgba(255, 255, 255, 0.25);
+    transition: all 0.1s ease;
+  }
+}

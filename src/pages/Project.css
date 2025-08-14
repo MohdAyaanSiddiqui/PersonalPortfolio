@@ -52,9 +52,10 @@
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
   margin-bottom: 4rem;
+  padding: 0 0.5rem;
 }
 
 .project-card {
@@ -252,7 +253,7 @@
 /* Responsive design */
 @media (max-width: 768px) {
   .projects-container {
-    padding: 100px 15px 40px;
+    padding: 90px 15px 40px;
   }
   
   .projects-grid {
@@ -262,38 +263,106 @@
   
   .filter-buttons {
     gap: 0.5rem;
+    margin-bottom: 2rem;
+    padding: 0 0.5rem;
   }
   
   .filter-btn {
-    padding: 8px 16px;
+    padding: 10px 18px;
     font-size: 0.9rem;
+    flex: 1;
+    min-width: 100px;
+    max-width: 150px;
+  }
+  
+  .project-card {
+    margin: 0 0.5rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  }
+  
+  .project-image {
+    height: 180px; /* Slightly smaller for mobile */
   }
   
   .project-links {
     flex-direction: column;
+    width: 100%;
   }
   
-  .project-link {
+  .project-link-btn {
+    display: block;
     text-align: center;
-    justify-content: center;
+    padding: 12px 0;
+    width: 100%;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    font-weight: 600;
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+    transition: all 0.3s ease;
+  }
+  
+  .project-link-btn:active {
+    transform: scale(0.98);
+    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
+  }
+  
+  .project-tech {
+    margin-bottom: 1.2rem;
   }
 }
 
 @media (max-width: 480px) {
   .projects-container {
-    padding: 80px 10px 30px;
+    padding: 80px 8px 30px;
+  }
+  
+  .projects-header {
+    margin-bottom: 2rem;
+  }
+  
+  .projects-title {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .projects-subtitle {
+    font-size: 0.95rem;
+    padding: 0 0.5rem;
   }
   
   .project-content {
-    padding: 1rem;
+    padding: 0.8rem;
   }
   
   .project-title {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
   
   .project-description {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .tech-tag {
+    padding: 3px 10px;
+    font-size: 0.75rem;
+  }
+  
+  .filter-buttons {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .filter-btn {
+    margin-bottom: 0.5rem;
+    padding: 8px 12px;
+    font-size: 0.85rem;
+    min-width: 90px;
+  }
+  
+  .project-image {
+    height: 160px;
   }
 }
 
@@ -312,4 +381,4 @@
 
 .project-card:hover {
   animation: projectCardHover 0.3s ease-out forwards;
-} 
+}
