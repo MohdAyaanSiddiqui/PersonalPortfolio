@@ -27,13 +27,13 @@ function Project() {
         },
         {
             id: 3,
-            title: "Github Profile Finder ",
-            description: "A Github user search tool built with React and Github API , allow user to enter any Github username and view thier profile",
-            tech: ["React", "JavaScript", "Github API"],
-            liveLink: "https://github-profile-finder-git-main-mohdayaansiddiquis-projects.vercel.app",
+            title: "Movie Search App",
+            description: "A Movie Search App that allows user to search movies and view details of the movie",
+            tech: ["React", "JavaScript", "IMDB API"],
+            liveLink: "https://movie-search-app-git-main-mohdayaansiddiquis-projects.vercel.app",
             featured: false,
             category: "frontend",
-            image: "/images/Github.jpg"
+            image: "/images/movie.jpg"
         },
        
     ];
