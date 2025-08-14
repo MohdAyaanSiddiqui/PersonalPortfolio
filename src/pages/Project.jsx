@@ -13,7 +13,7 @@ function Project() {
             liveLink: "https://live-chat-app-git-main-mohdayaansiddiquis-projects.vercel.app",
             featured: false,
             category: "frontend",
-            image: "/images/LiveChat.jpg"
+            image: "/images/live.jpg"
         },
         {
             id: 2,
@@ -23,7 +23,7 @@ function Project() {
             liveLink: "https://new-weather-app-psi.vercel.app/",
             featured: false,
             category: "ai",
-            image: "/images/Weather.jpg"
+            image: "/images/weather2.jpg"
         },
         {
             id: 3,
