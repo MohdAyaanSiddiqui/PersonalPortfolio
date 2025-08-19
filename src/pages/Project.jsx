@@ -9,31 +9,28 @@ function Project() {
             id: 1,
             title: "Live Chat Application",
             description: "An intelligent chat application. Includes real-time messaging, sentiment analysis, and automated responses.",
-            tech: ["React", "Firebase Authentication", "Firebase(Firestore)"],
+            tech: ["React", "Firebase Authentication"],
             liveLink: "https://live-chat-app-git-main-mohdayaansiddiquis-projects.vercel.app",
             featured: false,
-            category: "frontend",
             image: "/images/live.jpg"
         },
         {
             id: 2,
             title: "Weather Dashboard",
             description: "A beautiful weather dashboard that displays current weather conditions, forecasts, and interactive maps using weather APIs.",
-            tech: ["React", "JavaScript", "OpenWeather API"],
+            tech: ["React",  "OpenWeather API"],
             liveLink: "https://new-weather-app-psi.vercel.app/",
             featured: false,
-            category: "ai",
             image: "/images/weather2.jpg"
         },
         {
             id: 3,
-            title: "Movie Search App",
-            description: "A Movie Search App that allows user to search movies and view details of the movie",
-            tech: ["React", "JavaScript", "IMDB API"],
-            liveLink: "https://movie-search-app-git-main-mohdayaansiddiquis-projects.vercel.app",
+            title: "Notes App",
+            description: "A lightweight and user-friendly application built with react that allows user to create , edit and delete notes efficiently",
+            tech: ["React", "Firebase"],
+            liveLink: "https://notes-app-git-main-mohdayaansiddiquis-projects.vercel.app",
             featured: false,
-            category: "frontend",
-            image: "/images/movie.jpg"
+            image: "/images/notes.jpg"
         },
        
     ];
@@ -52,28 +49,6 @@ function Project() {
                         and showcases different aspects of my development skills.
                     </p>
                 </div>
-
-                <div className="filter-buttons">
-                    <button 
-                        className={`filter-btn ${activeFilter === 'all' ? 'active' : ''}`}
-                        onClick={() => setActiveFilter('all')}
-                    >
-                        All Projects
-                    </button>
-                    <button 
-                        className={`filter-btn ${activeFilter === 'frontend' ? 'active' : ''}`}
-                        onClick={() => setActiveFilter('frontend')}
-                    >
-                        Frontend
-                    </button>
-                    <button 
-                        className={`filter-btn ${activeFilter === 'ai' ? 'active' : ''}`}
-                        onClick={() => setActiveFilter('ai')}
-                    >
-                        AI
-                    </button>
-                </div>
-
                 <div className="projects-grid">
                     {filteredProjects.map((project) => (
                         <div 
