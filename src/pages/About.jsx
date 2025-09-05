@@ -77,10 +77,17 @@ function About() {
                     <div className="timeline">
                         <div className="timeline-item">
                             <div className="timeline-content">
-                                <div className="timeline-date">Jan 2025 - Mar 2025</div>
-                                <h3 className="timeline-title">Front-End Developer Intern at Plasmid</h3>
+                                <h3 className="timeline-title">Open Soure Contribution | GitHub Readme Quotes | Remote | 2025</h3>
                                 <p className="timeline-description">
-                                    During my 3-month internship at Plasmid, I contributed to the design and development of responsive web applications using modern technologies such as HTML/CSS, JavaScript, and React.js. I collaborated with a talented team to deliver user-friendly features and improve overall site performance.
+                                - Contributed 5 issues (features & documentation) to an active open-source project.
+                                <br/>
+                                Implemented “Custom Themes from Website” (#147) 
+                                <br/>
+                                integrated Un Splash API for dynamic quote backgrounds (#239).
+                                <br/>
+                                Enhanced developer documentation (#119, #130) for custom font support and React integration,
+                                <br/>
+                                Add Custom quote for auto correct (#241)  
                                 </p>
                             </div>
                         </div>
