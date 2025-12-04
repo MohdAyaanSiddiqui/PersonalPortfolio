@@ -8,18 +8,38 @@ function About() {
                 <div className="about-header">
                     <h1 className="about-title">About Me</h1>
                     <p className="about-subtitle">
-                        Passionate Fullstack Developer with expertise in React and AI technologies. 
-                        I love creating innovative solutions and bringing ideas to life through code.
+                        Passionate full-stack developer with expertise in React and modern web technologies.
+                        I love creating innovative solutions and bringing ideas to life through clean, maintainable code.
                     </p>
                 </div>
 
                 <div className="about-grid">
+                    <div className="about-card about-profile-card">
+                        <div className="profile-avatar">MAS</div>
+                        <h3 className="card-title">Full-Stack Developer</h3>
+                        <p className="card-description">
+                            Based in Lucknow, India. I love turning ideas into beautiful, fast and accessible web experiences.
+                        </p>
+                        <div className="profile-tags">
+                            <span className="profile-tag">Open Source</span>
+                            <span className="profile-tag">Full-Stack</span>
+                            <span className="profile-tag">Problem Solver</span>
+                        </div>
+                    </div>
+
                     <div className="about-card" style={{ textAlign: 'center' }}>
                         <div className="card-icon">💻</div>
                         <h3 className="card-title">Front-End Development</h3>
                         <p className="card-description">
-                            Experienced in building complete web applications from frontend to backend, 
-                            with expertise in React, JavaScript, and modern web technologies.
+                            Crafting responsive, pixel-perfect UIs with React, modern JavaScript and CSS.
+                        </p>
+                    </div>
+
+                    <div className="about-card" style={{ textAlign: 'center' }}>
+                        <div className="card-icon">⚙️</div>
+                        <h3 className="card-title">Back-End & Tools</h3>
+                        <p className="card-description">
+                            Comfortable with APIs, databases and Git-based workflows to ship features reliably.
                         </p>
                     </div>
                 </div>
@@ -30,31 +50,31 @@ function About() {
                         <div className="skill-item">
                             <div className="skill-name">HTML / Tailwind CSS</div>
                             <div className="skill-level">
-                                <div className="skill-progress"></div>
+                                <div className="skill-progress" style={{ width: '90%' }}></div>
                             </div>
                         </div>
                         <div className="skill-item">
                             <div className="skill-name">JavaScript</div>
                             <div className="skill-level">
-                                <div className="skill-progress"></div>
+                                <div className="skill-progress" style={{ width: '85%' }}></div>
                             </div>
                         </div>
                         <div className="skill-item">
                             <div className="skill-name">React.js</div>
                             <div className="skill-level">
-                                <div className="skill-progress"></div>
+                                <div className="skill-progress" style={{ width: '85%' }}></div>
                             </div>
                         </div>
                         <div className="skill-item">
                             <div className="skill-name">Java</div>
                             <div className="skill-level">
-                                <div className="skill-progress"></div>
+                                <div className="skill-progress" style={{ width: '70%' }}></div>
                             </div>
                         </div>
                         <div className="skill-item">
                             <div className="skill-name">SQL</div>
                             <div className="skill-level">
-                                <div className="skill-progress"></div>
+                                <div className="skill-progress" style={{ width: '75%' }}></div>
                             </div>
                         </div>
                     </div>
@@ -64,9 +84,9 @@ function About() {
                     <h2 className="skills-title">Version Controls</h2>
                     <div className="skills-grid">
                         <div className="skill-item">
-                            <div className="skill-name">Git/ Github</div>
+                            <div className="skill-name">Git / GitHub</div>
                             <div className="skill-level">
-                                <div className="skill-progress"></div>
+                                <div className="skill-progress" style={{ width: '80%' }}></div>
                             </div>
                         </div>
                     </div>
@@ -77,17 +97,17 @@ function About() {
                     <div className="timeline">
                         <div className="timeline-item">
                             <div className="timeline-content">
-                                <h3 className="timeline-title">Open Soure Contribution | GitHub Readme Quotes | Remote | 2025</h3>
+                                <h3 className="timeline-title">Open Source Contributor | GitHub Readme Quotes | Remote | 2025</h3>
                                 <p className="timeline-description">
-                                - Contributed 5 issues (features & documentation) to an active open-source project.
-                                <br/>
-                                Implemented “Custom Themes from Website” (#147) 
-                                <br/>
-                                integrated Un Splash API for dynamic quote backgrounds (#239).
-                                <br/>
-                                Enhanced developer documentation (#119, #130) for custom font support and React integration,
-                                <br/>
-                                Add Custom quote for auto correct (#241)  
+                                    Contributed to an active open-source project by:
+                                    <br />
+                                    • Implementing “Custom Themes from Website” (#147).
+                                    <br />
+                                    • Integrating Unsplash API for dynamic quote backgrounds (#239).
+                                    <br />
+                                    • Enhancing developer documentation for custom font support and React integration (#119, #130).
+                                    <br />
+                                    • Adding custom quote support with auto-correct (#241).
                                 </p>
                             </div>
                         </div>

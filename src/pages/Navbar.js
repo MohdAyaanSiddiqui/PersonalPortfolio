@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { useState, useEffect, useRef } from "react";
 import "./Navbar.css";
 
@@ -53,15 +53,56 @@ function Navbar() {
     return (
         <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`} ref={navRef}>
             <div className="nav-container">
-                <Link to="/" className="nav-logo" onClick={() => isMenuOpen && setIsMenuOpen(false)}>
-                    My Portfolio
-                </Link>
+                <NavLink to="/" className="nav-logo" onClick={() => isMenuOpen && setIsMenuOpen(false)}>
+                    Ayaan.dev
+                </NavLink>
                 
                 <ul className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
-                    <li><Link to="/" className="nav-link" onClick={() => setIsMenuOpen(false)}>Home</Link></li>
-                    <li><Link to="/about" className="nav-link" onClick={() => setIsMenuOpen(false)}>About</Link></li>
-                    <li><Link to="/contact" className="nav-link" onClick={() => setIsMenuOpen(false)}>Contact</Link></li>
-                    <li><Link to="/project" className="nav-link" onClick={() => setIsMenuOpen(false)}>Project</Link></li>
+                    <li>
+                        <NavLink
+                            to="/"
+                            className={({ isActive }) => `nav-link${isActive ? ' active' : ''}`}
+                            onClick={() => setIsMenuOpen(false)}
+                        >
+                            Home
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink
+                            to="/about"
+                            className={({ isActive }) => `nav-link${isActive ? ' active' : ''}`}
+                            onClick={() => setIsMenuOpen(false)}
+                        >
+                            About
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink
+                            to="/contact"
+                            className={({ isActive }) => `nav-link${isActive ? ' active' : ''}`}
+                            onClick={() => setIsMenuOpen(false)}
+                        >
+                            Contact
+                        </NavLink>
+                    </li>
+                    <li>
+                        <NavLink
+                            to="/project"
+                            className={({ isActive }) => `nav-link${isActive ? ' active' : ''}`}
+                            onClick={() => setIsMenuOpen(false)}
+                        >
+                            Project
+                        </NavLink>
+                    </li>
+                    <li className="nav-cta-item">
+                        <NavLink
+                            to="/contact"
+                            className="nav-cta"
+                            onClick={() => setIsMenuOpen(false)}
+                        >
+                            {"Let's talk"}
+                        </NavLink>
+                    </li>
                 </ul>
                 
                 <button 
