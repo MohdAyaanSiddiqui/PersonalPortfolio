@@ -24,8 +24,12 @@ function Home() {
                 <div className="skills-showcase">
                     <span className="skill-tag">React</span>
                     <span className="skill-tag">JavaScript</span>
-                    <span className="skill-tag">Tailwind CSS</span>
-                    <span className="skill-tag">Firebase</span>
+                    <span className="skill-tag">HTML /Tailwind CSS</span>
+                    <span className="skill-tag">Express.js</span>
+                    <span className="skill-tag">Node.js</span>
+                    <span className="skill-tag">MongoDB</span>
+                    <span className="skill-tag">Java</span>
+                    <span className="skill-tag">Git/GitHub</span>
                 </div>
             </div>
         </div>
